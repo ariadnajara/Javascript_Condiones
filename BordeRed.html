@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Imagen con borde</title>
+  
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f5f5f5;
+      font-family: Arial, sans-serif;
+    }
+
+    img {
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .borde-rojo {
+      border: 2px solid red;
+    }
+  </style>
+</head>
+<body>
+
+  <img id="miImagen" src="https://picsum.photos/300" alt="Imagen de ejemplo">
+
+  <script>
+    const imagen = document.getElementById("miImagen");
+
+    imagen.addEventListener("click", () => {
+      imagen.classList.toggle("borde-rojo");
+    });
+  </script>
+
+</body>
+</html>
